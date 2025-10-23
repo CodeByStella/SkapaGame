@@ -1,0 +1,478 @@
+fileFormatVersion: 2
+guid: 6afcb711d9d894d4faa415d50fc40cc2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5783452289435466748
+    second: Zeke(BIGRAMP)_Christ_0
+  - first:
+      213: 2111027533212278470
+    second: Zeke(BIGRAMP)_Christ_1
+  - first:
+      213: -5297631683415663314
+    second: Zeke(BIGRAMP)_Christ_2
+  - first:
+      213: 4576115824906371079
+    second: Zeke(BIGRAMP)_Christ_3
+  - first:
+      213: 7992237472086529632
+    second: Zeke(BIGRAMP)_Christ_4
+  - first:
+      213: 11968389446233194
+    second: Zeke(BIGRAMP)_Christ_5
+  - first:
+      213: 2693781153088617458
+    second: Zeke(BIGRAMP)_Christ_6
+  - first:
+      213: 965721249843287879
+    second: Zeke(BIGRAMP)_Christ_7
+  - first:
+      213: -8284076133503785118
+    second: Zeke(BIGRAMP)_Christ_8
+  - first:
+      213: 5228107238738786837
+    second: Zeke(BIGRAMP)_Christ_9
+  - first:
+      213: 2821230887481063368
+    second: Zeke(BIGRAMP)_Christ_10
+  - first:
+      213: -4213853459929478852
+    second: Zeke(BIGRAMP)_Christ_11
+  - first:
+      213: -3692652976386686043
+    second: Zeke(BIGRAMP)_Christ_12
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Zeke(BIGRAMP)_Christ_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 0
+        width: 34
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb78371733f24050800000000000000
+      internalID: 5783452289435466748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke(BIGRAMP)_Christ_1
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 0
+        width: 45
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cedf245b50eb4d10800000000000000
+      internalID: 2111027533212278470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke(BIGRAMP)_Christ_2
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 0
+        width: 47
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2d972f4d080b76b0800000000000000
+      internalID: -5297631683415663314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke(BIGRAMP)_Christ_3
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 0
+        width: 44
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7008692f811a18f30800000000000000
+      internalID: 4576115824906371079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke(BIGRAMP)_Christ_4
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 0
+        width: 37
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 066984cd2a12aee60800000000000000
+      internalID: 7992237472086529632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke(BIGRAMP)_Christ_5
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 0
+        width: 33
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ce971df258a2000800000000000000
+      internalID: 11968389446233194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke(BIGRAMP)_Christ_6
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 0
+        width: 31
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fb3d7cbfab326520800000000000000
+      internalID: 2693781153088617458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke(BIGRAMP)_Christ_7
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 0
+        width: 32
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74794f03c5ee66d00800000000000000
+      internalID: 965721249843287879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke(BIGRAMP)_Christ_8
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 0
+        width: 37
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2672732c5ac090d80800000000000000
+      internalID: -8284076133503785118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke(BIGRAMP)_Christ_9
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 0
+        width: 44
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51a7cac75d7fd8840800000000000000
+      internalID: 5228107238738786837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke(BIGRAMP)_Christ_10
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 0
+        width: 47
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c73bad6b86072720800000000000000
+      internalID: 2821230887481063368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke(BIGRAMP)_Christ_11
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 0
+        width: 45
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c394a59aa926585c0800000000000000
+      internalID: -4213853459929478852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke(BIGRAMP)_Christ_12
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 0
+        width: 34
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a3cea7beaf01ccc0800000000000000
+      internalID: -3692652976386686043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Zeke(BIGRAMP)_Christ_0: 5783452289435466748
+      Zeke(BIGRAMP)_Christ_1: 2111027533212278470
+      Zeke(BIGRAMP)_Christ_10: 2821230887481063368
+      Zeke(BIGRAMP)_Christ_11: -4213853459929478852
+      Zeke(BIGRAMP)_Christ_12: -3692652976386686043
+      Zeke(BIGRAMP)_Christ_2: -5297631683415663314
+      Zeke(BIGRAMP)_Christ_3: 4576115824906371079
+      Zeke(BIGRAMP)_Christ_4: 7992237472086529632
+      Zeke(BIGRAMP)_Christ_5: 11968389446233194
+      Zeke(BIGRAMP)_Christ_6: 2693781153088617458
+      Zeke(BIGRAMP)_Christ_7: 965721249843287879
+      Zeke(BIGRAMP)_Christ_8: -8284076133503785118
+      Zeke(BIGRAMP)_Christ_9: 5228107238738786837
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

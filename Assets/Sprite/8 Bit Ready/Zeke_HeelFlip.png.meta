@@ -1,0 +1,503 @@
+fileFormatVersion: 2
+guid: 3accd3f1390e995428a0a0ae8dcf0d69
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6210166857084510461
+    second: Zeke_HeelFlip_0
+  - first:
+      213: -4354916496811062874
+    second: Zeke_HeelFlip_1
+  - first:
+      213: -333413493955451790
+    second: Zeke_HeelFlip_2
+  - first:
+      213: 4109282462812971253
+    second: Zeke_HeelFlip_3
+  - first:
+      213: -4534423807971687709
+    second: Zeke_HeelFlip_4
+  - first:
+      213: 5720219022723415598
+    second: Zeke_HeelFlip_5
+  - first:
+      213: 6753488266207991791
+    second: Zeke_HeelFlip_6
+  - first:
+      213: -728698851431287671
+    second: Zeke_HeelFlip_7
+  - first:
+      213: 7577647074891789898
+    second: Zeke_HeelFlip_8
+  - first:
+      213: -554729275918798499
+    second: Zeke_HeelFlip_9
+  - first:
+      213: -8984567352813014868
+    second: Zeke_HeelFlip_10
+  - first:
+      213: -7551366453813875562
+    second: Zeke_HeelFlip_11
+  - first:
+      213: 5171136009251517135
+    second: Zeke_HeelFlip_12
+  - first:
+      213: -5643029521685916733
+    second: Zeke_HeelFlip_13
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Zeke_HeelFlip_0
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 0
+        width: 369
+        height: 910
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30fd297752e01d9a0800000000000000
+      internalID: -6210166857084510461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_HeelFlip_1
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 0
+        width: 344
+        height: 910
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a9861df48a3093c0800000000000000
+      internalID: -4354916496811062874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_HeelFlip_2
+      rect:
+        serializedVersion: 2
+        x: 2697
+        y: 0
+        width: 369
+        height: 910
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 274a679913a7f5bf0800000000000000
+      internalID: -333413493955451790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_HeelFlip_3
+      rect:
+        serializedVersion: 2
+        x: 3825
+        y: 0
+        width: 467
+        height: 910
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f0a5b5c0aa170930800000000000000
+      internalID: 4109282462812971253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_HeelFlip_4
+      rect:
+        serializedVersion: 2
+        x: 4996
+        y: 0
+        width: 558
+        height: 1027
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e206c0329d7211c0800000000000000
+      internalID: -4534423807971687709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_HeelFlip_5
+      rect:
+        serializedVersion: 2
+        x: 6247
+        y: 0
+        width: 464
+        height: 1136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2e7cd6e4ec426f40800000000000000
+      internalID: 5720219022723415598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_HeelFlip_6
+      rect:
+        serializedVersion: 2
+        x: 7312
+        y: 0
+        width: 570
+        height: 1137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe7981eebc539bd50800000000000000
+      internalID: 6753488266207991791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_HeelFlip_7
+      rect:
+        serializedVersion: 2
+        x: 8494
+        y: 0
+        width: 570
+        height: 1134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 984f334614423e5f0800000000000000
+      internalID: -728698851431287671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_HeelFlip_8
+      rect:
+        serializedVersion: 2
+        x: 9677
+        y: 0
+        width: 573
+        height: 1134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a46f334ddd5392960800000000000000
+      internalID: 7577647074891789898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_HeelFlip_9
+      rect:
+        serializedVersion: 2
+        x: 10890
+        y: 0
+        width: 505
+        height: 1094
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d51b952a9a43d48f0800000000000000
+      internalID: -554729275918798499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_HeelFlip_10
+      rect:
+        serializedVersion: 2
+        x: 12137
+        y: 0
+        width: 399
+        height: 963
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca0320b4897605380800000000000000
+      internalID: -8984567352813014868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_HeelFlip_11
+      rect:
+        serializedVersion: 2
+        x: 13206
+        y: 0
+        width: 572
+        height: 910
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c6f971838243790800000000000000
+      internalID: -7551366453813875562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_HeelFlip_12
+      rect:
+        serializedVersion: 2
+        x: 14482
+        y: 0
+        width: 438
+        height: 910
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc2faa47dc093c740800000000000000
+      internalID: 5171136009251517135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_HeelFlip_13
+      rect:
+        serializedVersion: 2
+        x: 15718
+        y: 0
+        width: 371
+        height: 910
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c35ede4c8eefa1b0800000000000000
+      internalID: -5643029521685916733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Zeke_HeelFlip_0: -6210166857084510461
+      Zeke_HeelFlip_1: -4354916496811062874
+      Zeke_HeelFlip_10: -8984567352813014868
+      Zeke_HeelFlip_11: -7551366453813875562
+      Zeke_HeelFlip_12: 5171136009251517135
+      Zeke_HeelFlip_13: -5643029521685916733
+      Zeke_HeelFlip_2: -333413493955451790
+      Zeke_HeelFlip_3: 4109282462812971253
+      Zeke_HeelFlip_4: -4534423807971687709
+      Zeke_HeelFlip_5: 5720219022723415598
+      Zeke_HeelFlip_6: 6753488266207991791
+      Zeke_HeelFlip_7: -728698851431287671
+      Zeke_HeelFlip_8: 7577647074891789898
+      Zeke_HeelFlip_9: -554729275918798499
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

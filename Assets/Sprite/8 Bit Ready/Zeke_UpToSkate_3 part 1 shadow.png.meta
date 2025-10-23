@@ -1,0 +1,528 @@
+fileFormatVersion: 2
+guid: 1246407342f79024b92dd2a558c157e3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7511733819435201953
+    second: Zeke_UpToSkate_3 part 1 shadow_0
+  - first:
+      213: -7959167865244204380
+    second: Zeke_UpToSkate_3 part 1 shadow_1
+  - first:
+      213: 2961635321030271128
+    second: Zeke_UpToSkate_3 part 1 shadow_2
+  - first:
+      213: 8110445600496650771
+    second: Zeke_UpToSkate_3 part 1 shadow_3
+  - first:
+      213: -5560387535279899554
+    second: Zeke_UpToSkate_3 part 1 shadow_4
+  - first:
+      213: -5798934097681517886
+    second: Zeke_UpToSkate_3 part 1 shadow_5
+  - first:
+      213: -4499523162441185347
+    second: Zeke_UpToSkate_3 part 1 shadow_6
+  - first:
+      213: -5328649603372069420
+    second: Zeke_UpToSkate_3 part 1 shadow_7
+  - first:
+      213: 7330030121025018188
+    second: Zeke_UpToSkate_3 part 1 shadow_8
+  - first:
+      213: -965965018606623272
+    second: Zeke_UpToSkate_3 part 1 shadow_9
+  - first:
+      213: -8519046382560920562
+    second: Zeke_UpToSkate_3 part 1 shadow_10
+  - first:
+      213: 797082514180150106
+    second: Zeke_UpToSkate_3 part 1 shadow_11
+  - first:
+      213: -4220315465409513604
+    second: Zeke_UpToSkate_3 part 1 shadow_12
+  - first:
+      213: -8456233609522370672
+    second: Zeke_UpToSkate_3 part 1 shadow_13
+  - first:
+      213: 200413808569615029
+    second: Zeke_UpToSkate_3 part 1 shadow_14
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Zeke_UpToSkate_3 part 1 shadow_0
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 0
+        width: 1058
+        height: 820
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5ac64dd3e5f0c790800000000000000
+      internalID: -7511733819435201953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_UpToSkate_3 part 1 shadow_1
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 0
+        width: 1099
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a24a6cfefa5b8190800000000000000
+      internalID: -7959167865244204380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_UpToSkate_3 part 1 shadow_2
+      rect:
+        serializedVersion: 2
+        x: 2519
+        y: 0
+        width: 1035
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 890624012a7d91920800000000000000
+      internalID: 2961635321030271128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_UpToSkate_3 part 1 shadow_3
+      rect:
+        serializedVersion: 2
+        x: 3718
+        y: 0
+        width: 1019
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31a8bbb7d471e8070800000000000000
+      internalID: 8110445600496650771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_UpToSkate_3 part 1 shadow_4
+      rect:
+        serializedVersion: 2
+        x: 4895
+        y: 0
+        width: 1026
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5cb1223ff885d2b0800000000000000
+      internalID: -5560387535279899554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_UpToSkate_3 part 1 shadow_5
+      rect:
+        serializedVersion: 2
+        x: 6082
+        y: 0
+        width: 1023
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c2fac7892c068fa0800000000000000
+      internalID: -5798934097681517886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_UpToSkate_3 part 1 shadow_6
+      rect:
+        serializedVersion: 2
+        x: 7263
+        y: 0
+        width: 1023
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db70d04f58b7e81c0800000000000000
+      internalID: -4499523162441185347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_UpToSkate_3 part 1 shadow_7
+      rect:
+        serializedVersion: 2
+        x: 8448
+        y: 0
+        width: 1026
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dd4b7a0b65dc06b0800000000000000
+      internalID: -5328649603372069420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_UpToSkate_3 part 1 shadow_8
+      rect:
+        serializedVersion: 2
+        x: 9630
+        y: 0
+        width: 1025
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c491c941f8f79b560800000000000000
+      internalID: 7330030121025018188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_UpToSkate_3 part 1 shadow_9
+      rect:
+        serializedVersion: 2
+        x: 10970
+        y: 0
+        width: 873
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d5af78fee33892f0800000000000000
+      internalID: -965965018606623272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_UpToSkate_3 part 1 shadow_10
+      rect:
+        serializedVersion: 2
+        x: 12225
+        y: 0
+        width: 800
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0c316e637446c980800000000000000
+      internalID: -8519046382560920562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_UpToSkate_3 part 1 shadow_11
+      rect:
+        serializedVersion: 2
+        x: 13534
+        y: 0
+        width: 677
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a531262d25ecf0b00800000000000000
+      internalID: 797082514180150106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_UpToSkate_3 part 1 shadow_12
+      rect:
+        serializedVersion: 2
+        x: 14720
+        y: 0
+        width: 672
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c77bd24c17d6e65c0800000000000000
+      internalID: -4220315465409513604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_UpToSkate_3 part 1 shadow_13
+      rect:
+        serializedVersion: 2
+        x: 15906
+        y: 0
+        width: 671
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09723bec55c65aa80800000000000000
+      internalID: -8456233609522370672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_UpToSkate_3 part 1 shadow_14
+      rect:
+        serializedVersion: 2
+        x: 17087
+        y: 0
+        width: 676
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b200eb0c4308c200800000000000000
+      internalID: 200413808569615029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Zeke_UpToSkate_3 part 1 shadow_0: -7511733819435201953
+      Zeke_UpToSkate_3 part 1 shadow_1: -7959167865244204380
+      Zeke_UpToSkate_3 part 1 shadow_10: -8519046382560920562
+      Zeke_UpToSkate_3 part 1 shadow_11: 797082514180150106
+      Zeke_UpToSkate_3 part 1 shadow_12: -4220315465409513604
+      Zeke_UpToSkate_3 part 1 shadow_13: -8456233609522370672
+      Zeke_UpToSkate_3 part 1 shadow_14: 200413808569615029
+      Zeke_UpToSkate_3 part 1 shadow_2: 2961635321030271128
+      Zeke_UpToSkate_3 part 1 shadow_3: 8110445600496650771
+      Zeke_UpToSkate_3 part 1 shadow_4: -5560387535279899554
+      Zeke_UpToSkate_3 part 1 shadow_5: -5798934097681517886
+      Zeke_UpToSkate_3 part 1 shadow_6: -4499523162441185347
+      Zeke_UpToSkate_3 part 1 shadow_7: -5328649603372069420
+      Zeke_UpToSkate_3 part 1 shadow_8: 7330030121025018188
+      Zeke_UpToSkate_3 part 1 shadow_9: -965965018606623272
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

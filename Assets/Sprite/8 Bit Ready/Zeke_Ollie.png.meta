@@ -1,0 +1,503 @@
+fileFormatVersion: 2
+guid: 1efc8f37f3ff3044c96f585f47f44ccf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -806591505063966247
+    second: Zeke_Ollie_0
+  - first:
+      213: 2524355511284719282
+    second: Zeke_Ollie_1
+  - first:
+      213: -6341848618924092840
+    second: Zeke_Ollie_2
+  - first:
+      213: 4403270677917167561
+    second: Zeke_Ollie_3
+  - first:
+      213: 1908380632427475946
+    second: Zeke_Ollie_4
+  - first:
+      213: 5749235455774768195
+    second: Zeke_Ollie_5
+  - first:
+      213: 7781982220999624723
+    second: Zeke_Ollie_6
+  - first:
+      213: 1854717216927125914
+    second: Zeke_Ollie_7
+  - first:
+      213: 3206698533205996863
+    second: Zeke_Ollie_8
+  - first:
+      213: -6360099006628997427
+    second: Zeke_Ollie_9
+  - first:
+      213: -8535469206553610291
+    second: Zeke_Ollie_10
+  - first:
+      213: -7311105783690079758
+    second: Zeke_Ollie_11
+  - first:
+      213: 4290799175893473871
+    second: Zeke_Ollie_12
+  - first:
+      213: 9170142652348826316
+    second: Zeke_Ollie_13
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Zeke_Ollie_0
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 0
+        width: 370
+        height: 910
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d980d5bc496ec4f0800000000000000
+      internalID: -806591505063966247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_Ollie_1
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 2
+        width: 346
+        height: 910
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bedce086ff480320800000000000000
+      internalID: 2524355511284719282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_Ollie_2
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 0
+        width: 365
+        height: 910
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8525ab9184a3df7a0800000000000000
+      internalID: -6341848618924092840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_Ollie_3
+      rect:
+        serializedVersion: 2
+        x: 3826
+        y: 0
+        width: 465
+        height: 910
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cf652f1a5f8b1d30800000000000000
+      internalID: 4403270677917167561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_Ollie_4
+      rect:
+        serializedVersion: 2
+        x: 4997
+        y: 0
+        width: 530
+        height: 1028
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae3331cf21eeb7a10800000000000000
+      internalID: 1908380632427475946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_Ollie_5
+      rect:
+        serializedVersion: 2
+        x: 6126
+        y: 0
+        width: 571
+        height: 1068
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34c398faf2369cf40800000000000000
+      internalID: 5749235455774768195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_Ollie_6
+      rect:
+        serializedVersion: 2
+        x: 7311
+        y: 1
+        width: 570
+        height: 1135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 318861b69972ffb60800000000000000
+      internalID: 7781982220999624723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_Ollie_7
+      rect:
+        serializedVersion: 2
+        x: 8498
+        y: 0
+        width: 569
+        height: 1135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a911eb96b774db910800000000000000
+      internalID: 1854717216927125914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_Ollie_8
+      rect:
+        serializedVersion: 2
+        x: 9705
+        y: 0
+        width: 508
+        height: 1095
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f35728d735b708c20800000000000000
+      internalID: 3206698533205996863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_Ollie_9
+      rect:
+        serializedVersion: 2
+        x: 10959
+        y: 0
+        width: 395
+        height: 962
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc6509596a36cb7a0800000000000000
+      internalID: -6360099006628997427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_Ollie_10
+      rect:
+        serializedVersion: 2
+        x: 12023
+        y: 0
+        width: 570
+        height: 910
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc73610cafbeb8980800000000000000
+      internalID: -8535469206553610291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_Ollie_11
+      rect:
+        serializedVersion: 2
+        x: 13299
+        y: 0
+        width: 439
+        height: 910
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f159df860cb98a90800000000000000
+      internalID: -7311105783690079758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_Ollie_12
+      rect:
+        serializedVersion: 2
+        x: 14533
+        y: 0
+        width: 372
+        height: 910
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4a5ba9ed1bfb8b30800000000000000
+      internalID: 4290799175893473871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zeke_Ollie_13
+      rect:
+        serializedVersion: 2
+        x: 15720
+        y: 0
+        width: 369
+        height: 910
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc209e42824e24f70800000000000000
+      internalID: 9170142652348826316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Zeke_Ollie_0: -806591505063966247
+      Zeke_Ollie_1: 2524355511284719282
+      Zeke_Ollie_10: -8535469206553610291
+      Zeke_Ollie_11: -7311105783690079758
+      Zeke_Ollie_12: 4290799175893473871
+      Zeke_Ollie_13: 9170142652348826316
+      Zeke_Ollie_2: -6341848618924092840
+      Zeke_Ollie_3: 4403270677917167561
+      Zeke_Ollie_4: 1908380632427475946
+      Zeke_Ollie_5: 5749235455774768195
+      Zeke_Ollie_6: 7781982220999624723
+      Zeke_Ollie_7: 1854717216927125914
+      Zeke_Ollie_8: 3206698533205996863
+      Zeke_Ollie_9: -6360099006628997427
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
