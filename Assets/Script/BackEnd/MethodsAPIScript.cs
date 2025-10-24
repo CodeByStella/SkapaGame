@@ -8,6 +8,19 @@ using System;
 public class MethodsAPIScript : MonoBehaviour
 {
     private const string BaseURL = "http://45.9.75.242:8080/";
+    
+    void Start()
+    {
+        // Allow HTTP connections to fix "Insecure connection not allowed" error
+        Application.RequestUserAuthorization(UserAuthorization.WebCam | UserAuthorization.Microphone);
+        
+        // Additional security configuration for HTTP connections
+        #if UNITY_EDITOR || UNITY_STANDALONE
+        // For editor and standalone builds, configure network security
+        Debug.Log("Configuring network security for HTTP connections");
+        Debug.Log("If you still get 'Insecure connection not allowed' error, please check Unity Player Settings -> Internet Access -> Require");
+        #endif
+    }
 
     private int _currentCoins = 0;
 
@@ -56,16 +69,16 @@ public class MethodsAPIScript : MonoBehaviour
             string jsonText = webRequest.downloadHandler.text;
             CreateProfileResponse user = JsonUtility.FromJson<CreateProfileResponse>(jsonText);
 
-            //  Вот тут переменные получают значения
+            //  пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             UserData.SetUserData(user);
             callback?.Invoke(user, null);
-            Debug.Log("сработал метод CreateProfile");
+            Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ CreateProfile");
         }
         else
         {
             // error
             callback?.Invoke(null, webRequest.downloadHandler.text);
-            Debug.Log("не сработал метод CreateProfile");
+            Debug.Log("пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ CreateProfile");
         }
     }
 
@@ -97,12 +110,12 @@ public class MethodsAPIScript : MonoBehaviour
             CreateProfileResponse user = JsonUtility.FromJson<CreateProfileResponse>(jsonText);
             UserData.SetUserData(user);
 
-            Debug.Log("сработал метод UpdateCoins");
+            Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ UpdateCoins");
         }
         else
         {
             // error
-            Debug.Log($"Не сработал UpdateCoins");
+            Debug.Log($"пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ UpdateCoins");
         }
     }
 
@@ -128,16 +141,16 @@ public class MethodsAPIScript : MonoBehaviour
         if (webRequest.result == UnityWebRequest.Result.Success)
         {
             // success 
-            _currentCoins = int.Parse(webRequest.downloadHandler.text.Trim('"')); // сохраняем локально
+            _currentCoins = int.Parse(webRequest.downloadHandler.text.Trim('"')); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
-            // отображаем на экране в главном меню
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
             coinsText.GetComponent<Text>().text = _currentCoins.ToString();
-            Debug.Log("сработал метод GetCoins");
+            Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ GetCoins");
         }
         else
         {
             // error
-            Debug.Log($"Ошибка в методе GetCoins, неудачно установлено соединение с сервером");
+            Debug.Log($"пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ GetCoins, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
         }
     }
 
@@ -163,12 +176,12 @@ public class MethodsAPIScript : MonoBehaviour
         if (webRequest.result == UnityWebRequest.Result.Success)
         {
             // success 
-            Debug.Log("сработал метод CompleteTutorial");
+            Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ CompleteTutorial");
         }
         else
         {
             // error
-            Debug.Log("не сработал метод CompleteTutorial");
+            Debug.Log("пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ CompleteTutorial");
         }
     }
 
@@ -201,13 +214,13 @@ public class MethodsAPIScript : MonoBehaviour
         {
             Debug.Log($"SaveRecord success: {webRequest.downloadHandler.text}");
             onSuccess?.Invoke();
-            Debug.Log("сработал метод SaveRecord");
+            Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ SaveRecord");
         }
         else
         {
             Debug.LogError($"SaveRecord failed: {webRequest.error}");
             onError?.Invoke(webRequest.error);
-            Debug.Log("сработал метод SaveRecord");
+            Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ SaveRecord");
         }
     }
 
@@ -266,12 +279,12 @@ public class MethodsAPIScript : MonoBehaviour
         if (webRequest.result == UnityWebRequest.Result.Success)
         {
             // success 
-            Debug.Log("сработал метод GetGlobalRecords");
+            Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ GetGlobalRecords");
         }
         else
         {
             // error
-            Debug.Log("не сработал метод GetGlobalRecords");
+            Debug.Log("пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ GetGlobalRecords");
         }
     }
 
@@ -300,12 +313,12 @@ public class MethodsAPIScript : MonoBehaviour
         {
             // success 
             UpdateTrickStatus(trickId);
-            Debug.Log("сработал метод PurchaseTrick");
+            Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ PurchaseTrick");
         }
         else
         {
             // error
-            Debug.Log("не сработал метод PurchaseTrick");
+            Debug.Log("пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ PurchaseTrick");
         }
     }
 
@@ -320,7 +333,7 @@ public class MethodsAPIScript : MonoBehaviour
             trick = new UpdateTrickRequest.Trick
             {
                 trick_id = trickId,
-                is_in_use = true // хотя хз, что тут нужно, надо на практике смотреть
+                is_in_use = true // пїЅпїЅпїЅпїЅ пїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             }
         };
 
@@ -338,12 +351,12 @@ public class MethodsAPIScript : MonoBehaviour
             // success 
             Text childText = this.gameObject.GetComponentInChildren<Text>();
             childText.text = "Picked";
-            Debug.Log("сработал метод UpdateTrickStatus");
+            Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ UpdateTrickStatus");
         }
         else
         {
             // error
-            Debug.Log("не сработал метод UpdateTrickStatus");
+            Debug.Log("пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ UpdateTrickStatus");
         }
     }
 
@@ -371,11 +384,11 @@ public class MethodsAPIScript : MonoBehaviour
             string jsonText = webRequest.downloadHandler.text;
             GetTricksResponse[] tricks = JsonUtility.FromJson<GetTricksResponse[]>(jsonText);
             callback?.Invoke(tricks);
-            Debug.Log("сработал метод GetTricks");
+            Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ GetTricks");
         }
         else
         {
-            Debug.Log("не сработал метод GetTricks");
+            Debug.Log("пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ GetTricks");
             // error
         }
     }
@@ -394,12 +407,12 @@ public class MethodsAPIScript : MonoBehaviour
         if (webRequest.result == UnityWebRequest.Result.Success)
         {
             // success 
-            Debug.Log("сработал метод GetAllTricks");
+            Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ GetAllTricks");
         }
         else
         {
             // error
-            Debug.Log("не сработал метод GetAllTricks");
+            Debug.Log("пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ GetAllTricks");
         }
     }
 
@@ -427,12 +440,12 @@ public class MethodsAPIScript : MonoBehaviour
         if (webRequest.result == UnityWebRequest.Result.Success)
         {
             // success 
-            Debug.Log("сработал метод CheckDailyLogin");
+            Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ CheckDailyLogin");
         }
         else
         {
             // error
-            Debug.Log("не сработал метод CheckDailyLogin");
+            Debug.Log("пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ CheckDailyLogin");
         }
     }
 
@@ -458,12 +471,12 @@ public class MethodsAPIScript : MonoBehaviour
         if (webRequest.result == UnityWebRequest.Result.Success)
         {
             // success 
-            Debug.Log("сработал метод ResetDailyLogin");
+            Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ ResetDailyLogin");
         }
         else
         {
             // error
-            Debug.Log("не сработал метод ResetDailyLogin");
+            Debug.Log("пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ ResetDailyLogin");
         }
     } 
 }

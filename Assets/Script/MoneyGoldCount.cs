@@ -9,13 +9,9 @@ public class MoneyGoldCount : MonoBehaviour
     // public int Money = 135;
     void Start()
     {
-        // TotalCoins = 119;
-        int Gvalue = PlayerPrefs.GetInt("GOLDMoneySave");
-        //int Money = PlayerPrefs.GetInt("TotalCoins");
-        PlayerPrefs.SetInt("TotalCoins", Gvalue);
-        TotalCoins = /*Money*/PlayerPrefs.GetInt("TotalCoins"); //+ Gvalue;
-        // PlayerPrefs.SetInt("GOLDMoneySave", 120);
-        //GetComponent<Text>().text = /*PlayerPrefs.GetInt("TotalCoins").*/TotalCoins.ToString();
+        // Load total coins from PlayerPrefs
+        TotalCoins = PlayerPrefs.GetInt("TotalCoins", 0);
+        Debug.Log("Total coins loaded: " + TotalCoins);
     }
     //public void MoneyUpd()
     //{
@@ -23,7 +19,13 @@ public class MoneyGoldCount : MonoBehaviour
     //}
     void Update()
     {
-        // GetComponent<Text>().text = PlayerPrefs.GetInt("TotalCoins").ToString();
+        // Update display with current total coins
         GetComponent<Text>().text = TotalCoins.ToString();
+    }
+    
+    // Method to update coin count when coins are collected
+    public static void UpdateCoinDisplay()
+    {
+        TotalCoins = PlayerPrefs.GetInt("TotalCoins", 0);
     }
 }

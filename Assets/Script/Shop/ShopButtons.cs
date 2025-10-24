@@ -35,8 +35,16 @@ public class ShopButtons : MonoBehaviour
         //     PlayerPrefs.SetInt("Trick360Christ", 0);
         //     PlayerPrefs.SetInt("TrickBackFlip", 0);
         //     PlayerPrefs.SetInt("TrickBenihana", 0);
-        if (int.TryParse(moneyText.GetComponent<Text>().text, out int result))
-            _money = result;
+        
+        // Initialize money from PlayerPrefs instead of UI text to avoid null reference
+        _money = PlayerPrefs.GetInt("Money", 0);
+        
+        // If moneyText is assigned, try to get value from it, otherwise use PlayerPrefs
+        if (moneyText != null && moneyText.GetComponent<Text>() != null)
+        {
+            if (int.TryParse(moneyText.GetComponent<Text>().text, out int result))
+                _money = result;
+        }
     }
 
     public void TshirtScr()

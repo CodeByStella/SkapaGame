@@ -22,7 +22,6 @@ public class LoadAnimZik : MonoBehaviour
         target = Path.Combine(Directory.GetCurrentDirectory() + $"/Assets/Sprite/ZikFlame/");
         Debug.Log(Directory.GetCurrentDirectory() + $"/Sprite/ZikFlame/");
         testPath = Path.Combine(System.Reflection.Assembly.GetExecutingAssembly().Location, "download.txt");
-        Debug.Log(testPath);
         startMenu = false;
         if (!ControlScriptForMenu.k && !ControlScriptForMenu.l && !ControlScriptForMenu.s)
         {

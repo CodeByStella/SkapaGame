@@ -63,24 +63,51 @@ public class Money : MonoBehaviour
             {
                 PlayerPrefs.SetInt("moneyOne", 1);
                 Move_Camera.fireTrue = true;
-                Debug.Log("1");
+                Debug.Log("Coin 1 collected! +1 coin");
                 GoldCount++;
+                
+                // Update total coins
+                int currentTotal = PlayerPrefs.GetInt("TotalCoins", 0);
+                PlayerPrefs.SetInt("TotalCoins", currentTotal + 1);
+                PlayerPrefs.Save(); // Ensure data is saved immediately
+                MoneyGoldCount.TotalCoins = PlayerPrefs.GetInt("TotalCoins");
+                MoneyGoldCount.UpdateCoinDisplay();
+                Debug.Log("Total coins now: " + MoneyGoldCount.TotalCoins);
+                
                 Destroy(gameObject); 
             }
             else if (gameObject.transform.name == "MoneyTWO0000(Clone)")
             {
                 PlayerPrefs.SetInt("moneyTwo", 1);
                 Move_Camera.fireTrue = true;
-                Debug.Log("2");
+                Debug.Log("Coin 2 collected! +2 coins");
                 GoldCount++;
+                
+                // Update total coins
+                int currentTotal = PlayerPrefs.GetInt("TotalCoins", 0);
+                PlayerPrefs.SetInt("TotalCoins", currentTotal + 2);
+                PlayerPrefs.Save(); // Ensure data is saved immediately
+                MoneyGoldCount.TotalCoins = PlayerPrefs.GetInt("TotalCoins");
+                MoneyGoldCount.UpdateCoinDisplay();
+                Debug.Log("Total coins now: " + MoneyGoldCount.TotalCoins);
+                
                 Destroy(gameObject); 
             }
             else if (gameObject.transform.name == "MoneyTHREE0000(Clone)")
             {
                 PlayerPrefs.SetInt("moneyThree", 1);
                 Move_Camera.fireTrue = true;
-                Debug.Log("3");
+                Debug.Log("Coin 3 collected! +3 coins");
                 GoldCount++;
+                
+                // Update total coins
+                int currentTotal = PlayerPrefs.GetInt("TotalCoins", 0);
+                PlayerPrefs.SetInt("TotalCoins", currentTotal + 3);
+                PlayerPrefs.Save(); // Ensure data is saved immediately
+                MoneyGoldCount.TotalCoins = PlayerPrefs.GetInt("TotalCoins");
+                MoneyGoldCount.UpdateCoinDisplay();
+                Debug.Log("Total coins now: " + MoneyGoldCount.TotalCoins);
+                
                 Destroy(gameObject); 
             }
             //else

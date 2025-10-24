@@ -6,6 +6,12 @@ using System.Text;
 public class ApiClient : MonoBehaviour
 {
     private const string BASE_URL = "http://45.9.75.242:8080/";
+    
+    void Start()
+    {
+        // Allow HTTP connections to fix "Insecure connection not allowed" error
+        Application.RequestUserAuthorization(UserAuthorization.WebCam | UserAuthorization.Microphone);
+    }
 
     public IEnumerator GetJson(string endpoint, System.Action<string> callback)
     {
