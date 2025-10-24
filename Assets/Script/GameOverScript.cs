@@ -33,7 +33,10 @@ public class GameOverScript : MonoBehaviour
         GameOverBool = false;
         string level = GetCurrentLevel();
 
-        StartCoroutine(MethodsAPIScript.Instance.GetLocalRecords(OnRecordsLoaded));
+        if (_api != null)
+        {
+            StartCoroutine(_api.GetLocalRecords(OnRecordsLoaded));
+        }
     }
 
     private void OnRecordsLoaded(int[] serverRecords)

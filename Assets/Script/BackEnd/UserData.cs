@@ -16,5 +16,5 @@ public class UserData
     public static int GetGoldCoins() { return UserDatas.gold_coins; }
     public static string GetLastLogin() { return UserDatas.last_login; }
     public static int GetConsecutiveDays() { return UserDatas.consecutive_days; }
-    public static bool GetTutorialResult() { return UserDatas.has_completed_tutorial; }
+    public static bool GetTutorialResult() { return UserDatas?.has_completed_tutorial ?? false; }
 }

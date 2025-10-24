@@ -35,7 +35,7 @@ public class CubeCtrl : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             dviz = 1;
             if (gameObject.transform.localPosition.y == -1.65f && dviz == 1)
@@ -59,7 +59,7 @@ public class CubeCtrl : MonoBehaviour
                 // Debug.Log("2");
             }
         }
-        else if (Input.GetKeyDown(KeyCode.W))
+        else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             dviz = 1;
             if (gameObject.transform.localPosition.y == -1.65f && dviz == 1)
@@ -84,25 +84,5 @@ public class CubeCtrl : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (!ScriptLearn.first_learn || !ScriptLearn.two_learn)
-            {
-                if (HeroClassNew.extraJump <= 3)
-                {
-                    HeroClassNew.extraJump++;
-                }
-
-                if (!HeroClassNew.MoveTop && !HeroClassNew.MoveBot)
-                {
-                    HeroClassNew.Jump = true;
-                }
-                else if (HeroClassNew.Jump)
-                {
-                    Debug.Log("Jump 2 Ready");
-                    HeroClassNew.JumpTwo = true;
-                }
-            }
-        }
     }
 }

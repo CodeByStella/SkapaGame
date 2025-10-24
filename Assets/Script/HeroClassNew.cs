@@ -448,7 +448,9 @@ public class HeroClassNew : MonoBehaviour
     {
         string currentTrickName;
 
-        yield return MethodsAPIScript.Instance.GetTricks((tricks) =>
+        if (_api != null)
+        {
+            yield return _api.GetTricks((tricks) =>
         {
             if (tricks == null || tricks.Length == 0)
             {
@@ -472,6 +474,7 @@ public class HeroClassNew : MonoBehaviour
             currentTrickName = "TrickOllieFlip";
             ChangeAnimation(currentTrickName);
         });
+        }
     }
 
     private void StopGame()
@@ -549,7 +552,10 @@ public class HeroClassNew : MonoBehaviour
         Fail = false;
         moneyFinal += Move_Camera.count;
         //PlayerPrefs.SetInt("Money", moneyFinal);
-        MethodsAPIScript.Instance.UpdateCoins(moneyFinal);
+        if (_api != null)
+        {
+            StartCoroutine(_api.UpdateCoins(moneyFinal));
+        }
     }
 
     public void DownLineTrue()

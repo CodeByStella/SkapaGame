@@ -47,18 +47,24 @@ public class SetActive : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Check if setActiveList is assigned and has elements
+        if (setActiveList == null || setActiveList.Length == 0)
+            return;
+
         if (Buttons.can_swi || Buttons.Shop)
         {
             for (int i = 0; i < setActiveList.Length; i++)
             {
-                setActiveList[i].SetActive(false);
+                if (setActiveList[i] != null)
+                    setActiveList[i].SetActive(false);
             }
         }
         else if (!Buttons.can_swi || !Buttons.Shop)
         {
             for (int i = 0; i < setActiveList.Length; i++)
             {
-                setActiveList[i].SetActive(true);
+                if (setActiveList[i] != null)
+                    setActiveList[i].SetActive(true);
             }
         }
     }

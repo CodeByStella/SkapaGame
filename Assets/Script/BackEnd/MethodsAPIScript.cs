@@ -7,7 +7,7 @@ using System;
 
 public class MethodsAPIScript : MonoBehaviour
 {
-    private const string BaseURL = "http://185.232.169.26:8080";
+    private const string BaseURL = "http://45.9.75.242:8080/";
 
     private int _currentCoins = 0;
 

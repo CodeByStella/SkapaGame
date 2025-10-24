@@ -18,6 +18,7 @@ public class JumpControl : MonoBehaviour
     {
         if (!ScriptLearn.first_learn || !ScriptLearn.two_learn)
         {
+            // Touch input (multi-touch)
             if (Input.touchCount > 1 && !stopBustJump)
             {
                 if (HeroClassNew.extraJump <= 3)
@@ -26,6 +27,25 @@ public class JumpControl : MonoBehaviour
                     stopBustJump = true;
                 }
     
+                if (!HeroClassNew.MoveTop && !HeroClassNew.MoveBot)
+                {
+                    HeroClassNew.Jump = true;
+                }
+                else if (HeroClassNew.Jump)
+                {
+                    Debug.Log("Jump 2 Ready");
+                    HeroClassNew.JumpTwo = true;
+                }
+            }
+            
+            // Keyboard input (Spacebar only)
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                if (HeroClassNew.extraJump <= 3)
+                {
+                    HeroClassNew.extraJump++;
+                }
+
                 if (!HeroClassNew.MoveTop && !HeroClassNew.MoveBot)
                 {
                     HeroClassNew.Jump = true;

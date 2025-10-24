@@ -36,7 +36,10 @@ public class ScriptLearn : MonoBehaviour
     {
         if (UserData.GetTutorialResult() == false)
         {
-            MethodsAPIScript.Instance.CompleteTutorial();
+            if (_api != null)
+            {
+                StartCoroutine(_api.CompleteTutorial());
+            }
             
             if (learn_start && first_learn)
             {

@@ -5,7 +5,7 @@ using System.Text;
 
 public class ApiClient : MonoBehaviour
 {
-    private const string BASE_URL = "http://185.232.169.26:8080";
+    private const string BASE_URL = "http://45.9.75.242:8080/";
 
     public IEnumerator GetJson(string endpoint, System.Action<string> callback)
     {
