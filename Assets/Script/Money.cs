@@ -68,11 +68,21 @@ public class Money : MonoBehaviour
                 
                 // Update total coins
                 int currentTotal = PlayerPrefs.GetInt("TotalCoins", 0);
-                PlayerPrefs.SetInt("TotalCoins", currentTotal + 1);
+                int newTotal = currentTotal + 1;
+                
+                Debug.Log("=== COIN COLLECTION ===");
+                Debug.Log("Coin type: MoneyONE (+1)");
+                Debug.Log("Previous total: " + currentTotal);
+                Debug.Log("New total: " + newTotal);
+                
+                PlayerPrefs.SetInt("TotalCoins", newTotal);
                 PlayerPrefs.Save(); // Ensure data is saved immediately
                 MoneyGoldCount.TotalCoins = PlayerPrefs.GetInt("TotalCoins");
                 MoneyGoldCount.UpdateCoinDisplay();
-                Debug.Log("Total coins now: " + MoneyGoldCount.TotalCoins);
+                
+                Debug.Log("✅ PlayerPrefs updated to: " + PlayerPrefs.GetInt("TotalCoins"));
+                Debug.Log("✅ TotalCoins updated to: " + MoneyGoldCount.TotalCoins);
+                Debug.Log("=== COIN COLLECTION END ===");
                 
                 Destroy(gameObject); 
             }

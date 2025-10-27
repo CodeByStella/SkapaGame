@@ -5,7 +5,7 @@ using System.Text;
 
 public class ApiClient : MonoBehaviour
 {
-    private const string BASE_URL = "http://45.9.75.242:8080/";
+    private const string BASE_URL = "https://api.skapa.world/";
     
     void Start()
     {

@@ -49,7 +49,7 @@ public class ShopButtons : MonoBehaviour
 
     public void TshirtScr()
     {
-        // Debug.Log("работает");
+        // Debug.Log("working");
         if (Buttons.skins) ButtonSkinsScr(this.gameObject.name);
         else if (Buttons.tricks) ButtonTricsStr(this.gameObject.name);
         
@@ -402,7 +402,7 @@ public class ShopButtons : MonoBehaviour
         // Debug.Log(moneyNow);
         if (moneyNow < buyItem)
         {
-            // Debug.Log("Недостаточно средств");
+            // Debug.Log("Insufficient funds");
             return false;
         }
         else

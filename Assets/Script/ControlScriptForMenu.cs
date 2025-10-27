@@ -98,7 +98,7 @@ public class ControlScriptForMenu : MonoBehaviour, IBeginDragHandler, IDragHandl
                     s = false;
                     l = true;
                     k = false;
-                    // Debug.Log("lass");
+                    // Debug.Log("class");
                     // Debug.Log(s + "s");
                     // Debug.Log(k + "k");
                     // Debug.Log(l + "l");
@@ -131,7 +131,7 @@ public class ControlScriptForMenu : MonoBehaviour, IBeginDragHandler, IDragHandl
                     s = false;
                     l = false;
                     k = true;
-                    // Debug.Log("krass");
+                    // Debug.Log("class");
                     // Debug.Log(s + "s");
                     // Debug.Log(k + "k");
                     // Debug.Log(l + "l");
@@ -162,7 +162,7 @@ public class ControlScriptForMenu : MonoBehaviour, IBeginDragHandler, IDragHandl
                     s = true;
                     l = false;
                     k = false;
-                    // Debug.Log("schh");
+                    // Debug.Log("class");
                     // Debug.Log(s + "s");
                     // Debug.Log(k + "k");
                     // Debug.Log(l + "l");
@@ -181,7 +181,7 @@ public class ControlScriptForMenu : MonoBehaviour, IBeginDragHandler, IDragHandl
                     s = true;
                     l = false;
                     k = false;
-                    // Debug.Log("sch");
+                    // Debug.Log("class");
                     // Debug.Log(s + "s");
                     // Debug.Log(k + "k");
                     // Debug.Log(l + "l");
@@ -197,7 +197,7 @@ public class ControlScriptForMenu : MonoBehaviour, IBeginDragHandler, IDragHandl
                     s = false;
                     l = true;
                     k = false;
-                    // Debug.Log("las");
+                    // Debug.Log("class");
                     // Debug.Log(s + "s");
                     // Debug.Log(k + "k");
                     // Debug.Log(l + "l");
@@ -227,7 +227,7 @@ public class ControlScriptForMenu : MonoBehaviour, IBeginDragHandler, IDragHandl
                     s = false;
                     l = false;
                     k = true;
-                    // Debug.Log("kras");
+                    // Debug.Log("class");
                     // Debug.Log(s + "s");
                     // Debug.Log(k + "k");
                     // Debug.Log(l + "l");

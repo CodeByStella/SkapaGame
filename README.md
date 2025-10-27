@@ -42,18 +42,25 @@ A Unity-based 2D endless runner skateboarding game with Telegram integration, fe
 ## 🏗️ Technical Architecture
 
 ### Backend Integration
-- **REST API**: Custom backend server at `http://45.9.75.242:8080/`
+- **REST API**: Custom backend server at `https://api.skapa.world/`
 - **User Management**: Profile creation, coin updates, tutorial completion
 - **Score System**: Local and global record tracking
 - **Trick Management**: Purchase and status updates for tricks
 - **Daily System**: Login tracking and reset functionality
+- **Coin Synchronization**: Real-time backend-frontend coin sync
 
 ### Core Systems
-- **MethodsAPIScript**: Main API communication handler
+- **MethodsAPIScript**: Main API communication handler with error logging
 - **TelegramManager**: Telegram integration and user authentication
 - **UserData**: User profile data management
-- **Money System**: Coin collection and spending mechanics
+- **MoneyGoldCount**: Coin collection, spending, and backend synchronization
 - **Shop System**: In-game purchases for skins and tricks
+
+### Recent Updates (v2.1)
+- ✅ **Fixed Coin Synchronization**: Direct backend coin fetching and syncing
+- ✅ **Improved Error Logging**: Tagged error messages for better debugging
+- ✅ **Simplified API Flow**: Removed unnecessary profile creation for coin sync
+- ✅ **Enhanced Stability**: Added null checks and error handling
 
 ## 🎮 Game Controls
 

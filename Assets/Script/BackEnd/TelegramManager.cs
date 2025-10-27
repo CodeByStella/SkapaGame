@@ -3,14 +3,39 @@ using UnityEngine;
 
 public class TelegramManager : MonoBehaviour
 {
-    public static string TelegramId { get; private set; }
+    public static string TelegramId { get; set; }
 
     private MethodsAPIScript api;
+    
+    void Start()
+    {
+        api = FindObjectOfType<MethodsAPIScript>();
+        
+        if (api == null)
+        {
+            return;
+        }
+        
+        if (string.IsNullOrEmpty(TelegramId))
+        {
+            TelegramId = "test_user";
+            InitProfile();
+        }
+    }
 
     public void SetTelegramId(string id)
     {
         TelegramId = id;
         InitProfile();
+    }
+    
+    // Static method to ensure TelegramId is set
+    public static void EnsureTelegramIdSet()
+    {
+        if (string.IsNullOrEmpty(TelegramId))
+        {
+            TelegramId = "test_user";
+        }
     }
 
     IEnumerator InitProfile()
@@ -20,19 +45,14 @@ public class TelegramManager : MonoBehaviour
             if (response != null)
             {
                 UserData.SetUserData(response);
-                Debug.Log("Новый профиль создан!");
+                MoneyGoldCount.SyncWithBackendCoins();
             }
-            else if (error == "Profile is exist")
+            else if (error == "Profile is exist" || error.Contains("401"))
             {
-                Debug.Log("Профиль уже существует. Загружаем...");
-
                 StartCoroutine(api.UpdateCoins(0, (existingUser) =>
                 {
+                    MoneyGoldCount.SyncWithBackendCoins();
                 }));
-            }
-            else
-            {
-                Debug.LogError("Ошибка при создании профиля: " + error);
             }
         }));
     }

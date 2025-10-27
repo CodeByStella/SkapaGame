@@ -24,6 +24,6 @@ public class TelegramRequestScript : MonoBehaviour
     {
         UnityWebRequest request = UnityWebRequest.Get(this.url);
         yield return request.SendWebRequest();
-        Debug.Log(request.downloadHandler.text);
+        Debug.Log("[TELEGRAM_REQUEST] Response: " + request.downloadHandler.text);
     }
 }

@@ -1,4 +1,3 @@
-
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -7,19 +6,11 @@ using System;
 
 public class MethodsAPIScript : MonoBehaviour
 {
-    private const string BaseURL = "http://45.9.75.242:8080/";
+    private const string BaseURL = "https://api.skapa.world";
     
     void Start()
     {
-        // Allow HTTP connections to fix "Insecure connection not allowed" error
-        Application.RequestUserAuthorization(UserAuthorization.WebCam | UserAuthorization.Microphone);
-        
-        // Additional security configuration for HTTP connections
-        #if UNITY_EDITOR || UNITY_STANDALONE
-        // For editor and standalone builds, configure network security
-        Debug.Log("Configuring network security for HTTP connections");
-        Debug.Log("If you still get 'Insecure connection not allowed' error, please check Unity Player Settings -> Internet Access -> Require");
-        #endif
+        // MethodsAPIScript initialized
     }
 
     private int _currentCoins = 0;
@@ -50,36 +41,75 @@ public class MethodsAPIScript : MonoBehaviour
     {
         string methodURL = "/profile/create";
 
+        // Ensure TelegramId is set
+        if (string.IsNullOrEmpty(TelegramManager.TelegramId))
+        {
+            TelegramManager.TelegramId = "test_user";
+        }
+
         CreateProfileRequest request = new CreateProfileRequest
         {
             telegram_id = TelegramManager.TelegramId
         };
 
         string json = JsonUtility.ToJson(request);
+        string fullURL = BaseURL + methodURL;
 
-        UnityWebRequest webRequest = new UnityWebRequest(BaseURL + methodURL, "POST");
-        webRequest.uploadHandler = new UploadHandlerRaw(System.Text.Encoding.UTF8.GetBytes(json));
+        UnityWebRequest webRequest = UnityWebRequest.Post(fullURL, json, "application/json");
         webRequest.downloadHandler = new DownloadHandlerBuffer();
-        webRequest.SetRequestHeader("Content-Type", "application/json");
-
+        webRequest.timeout = 10;
+        webRequest.SetRequestHeader("Accept", "application/json");
+        webRequest.SetRequestHeader("User-Agent", "Unity-WebRequest");
+        
         yield return webRequest.SendWebRequest();
 
         if (webRequest.result == UnityWebRequest.Result.Success)
         {
             string jsonText = webRequest.downloadHandler.text;
             CreateProfileResponse user = JsonUtility.FromJson<CreateProfileResponse>(jsonText);
-
-            //  ��� ��� ���������� �������� ��������
             UserData.SetUserData(user);
             callback?.Invoke(user, null);
-            Debug.Log("�������� ����� CreateProfile");
         }
         else
         {
-            // error
-            callback?.Invoke(null, webRequest.downloadHandler.text);
-            Debug.Log("�� �������� ����� CreateProfile");
+            Debug.LogError("[CREATE_PROFILE] Error: " + webRequest.downloadHandler.text);
+            if (webRequest.responseCode == 401)
+            {
+                Debug.Log("[CREATE_PROFILE] 401 Unauthorized - trying to get existing profile");
+                StartCoroutine(GetExistingProfile(callback));
+            }
+            else
+            {
+                callback?.Invoke(null, webRequest.downloadHandler.text);
+            }
         }
+    }
+
+
+    // Method to get existing profile when 401 error occurs
+    private IEnumerator GetExistingProfile(Action<CreateProfileResponse, string> callback)
+    {
+        Debug.Log("[GET_EXISTING_PROFILE] Attempting to get existing profile data");
+        yield return StartCoroutine(GetCoins((result) =>
+        {
+            if (!string.IsNullOrEmpty(result))
+            {
+                CreateProfileResponse existingProfile = new CreateProfileResponse
+                {
+                    telegram_id = TelegramManager.TelegramId,
+                    gold_coins = _currentCoins
+                };
+                
+                UserData.SetUserData(existingProfile);
+                callback?.Invoke(existingProfile, null);
+                Debug.Log("[GET_EXISTING_PROFILE] Successfully retrieved existing profile");
+            }
+            else
+            {
+                Debug.LogError("[GET_EXISTING_PROFILE] Failed to get existing profile data");
+                callback?.Invoke(null, "Failed to get existing profile");
+            }
+        }));
     }
 
     // put
@@ -87,35 +117,41 @@ public class MethodsAPIScript : MonoBehaviour
     {
         string methodURL = "/profile/update-coins";
 
+        // Get current coins from UserData if available, otherwise use _currentCoins
+        int currentBackendCoins = 0;
+        if (UserData.UserDatas != null)
+        {
+            currentBackendCoins = UserData.GetGoldCoins();
+        }
+        else
+        {
+            currentBackendCoins = _currentCoins;
+        }
 
         UpdateCoinsRequest request = new UpdateCoinsRequest
         {
             profile = new Profile { telegram_id = TelegramManager.TelegramId },
-            coins = new UpdateCoinsRequest.Coins { gold_coins = _currentCoins + changeableValueCoins }
+            coins = new UpdateCoinsRequest.Coins { gold_coins = currentBackendCoins + changeableValueCoins }
         };
 
         string json = JsonUtility.ToJson(request);
 
-        UnityWebRequest webRequest = new UnityWebRequest(BaseURL + methodURL, "PUT");
-        webRequest.uploadHandler = new UploadHandlerRaw(System.Text.Encoding.UTF8.GetBytes(json));
-        webRequest.downloadHandler = new DownloadHandlerBuffer();
+        UnityWebRequest webRequest = UnityWebRequest.Put(BaseURL + methodURL, json);
         webRequest.SetRequestHeader("Content-Type", "application/json");
+        webRequest.downloadHandler = new DownloadHandlerBuffer();
 
         yield return webRequest.SendWebRequest();
 
         if (webRequest.result == UnityWebRequest.Result.Success)
         {
-            // success
             string jsonText = webRequest.downloadHandler.text;
             CreateProfileResponse user = JsonUtility.FromJson<CreateProfileResponse>(jsonText);
             UserData.SetUserData(user);
-
-            Debug.Log("�������� ����� UpdateCoins");
+            Debug.Log("🪙 Coins updated: +" + changeableValueCoins + " -> Total: " + user.gold_coins);
         }
         else
         {
-            // error
-            Debug.Log($"�� �������� UpdateCoins");
+            Debug.LogError("[UPDATE_COINS] Error: " + webRequest.downloadHandler.text);
         }
     }
 
@@ -131,26 +167,31 @@ public class MethodsAPIScript : MonoBehaviour
 
         string json = JsonUtility.ToJson(request);
 
-        UnityWebRequest webRequest = new UnityWebRequest(BaseURL + methodURL, "POST");
-        webRequest.uploadHandler = new UploadHandlerRaw(System.Text.Encoding.UTF8.GetBytes(json));
+        // Use UnityWebRequest.Post to avoid Curl error 26
+        UnityWebRequest webRequest = UnityWebRequest.Post(BaseURL + methodURL, json, "application/json");
         webRequest.downloadHandler = new DownloadHandlerBuffer();
-        webRequest.SetRequestHeader("Content-Type", "application/json");
 
+        Debug.Log("[GET_COINS] Sending " + methodURL + " request...");
         yield return webRequest.SendWebRequest();
+        Debug.Log("[GET_COINS] " + methodURL + " completed. Result: " + webRequest.result);
 
         if (webRequest.result == UnityWebRequest.Result.Success)
         {
             // success 
-            _currentCoins = int.Parse(webRequest.downloadHandler.text.Trim('"')); // ��������� ��������
+            _currentCoins = int.Parse(webRequest.downloadHandler.text.Trim('"')); // Parse coins from response
 
-            // ���������� �� ������ � ������� ����
-            coinsText.GetComponent<Text>().text = _currentCoins.ToString();
-            Debug.Log("�������� ����� GetCoins");
+            // Update UI text with current coins
+            if (coinsText != null)
+            {
+                coinsText.GetComponent<Text>().text = _currentCoins.ToString();
+            }
+            Debug.Log("Successfully got coins");
         }
         else
         {
             // error
-            Debug.Log($"������ � ������ GetCoins, �������� ����������� ���������� � ��������");
+            Debug.LogError("[GET_COINS] Error: " + webRequest.downloadHandler.text);
+            Debug.Log($"Error in GetCoins, using local data as fallback");
         }
     }
 
@@ -166,22 +207,33 @@ public class MethodsAPIScript : MonoBehaviour
 
         string json = JsonUtility.ToJson(request);
 
-        UnityWebRequest webRequest = new UnityWebRequest(BaseURL + methodURL, "PUT");
-        webRequest.uploadHandler = new UploadHandlerRaw(System.Text.Encoding.UTF8.GetBytes(json));
-        webRequest.downloadHandler = new DownloadHandlerBuffer();
-        webRequest.SetRequestHeader("Content-Type", "application/json");
+        Debug.Log("=== COMPLETE TUTORIAL REQUEST ===");
+        Debug.Log("URL: " + BaseURL + methodURL);
+        Debug.Log("TelegramId: " + TelegramManager.TelegramId);
+        Debug.Log("Request JSON: " + json);
 
+        // Use UnityWebRequest.Put to avoid Curl error 26
+        UnityWebRequest webRequest = UnityWebRequest.Put(BaseURL + methodURL, json);
+        webRequest.SetRequestHeader("Content-Type", "application/json");
+        webRequest.downloadHandler = new DownloadHandlerBuffer();
+
+        Debug.Log("Sending " + methodURL + " request...");
         yield return webRequest.SendWebRequest();
+        Debug.Log(methodURL + " completed. Result: " + webRequest.result);
+        
+        Debug.Log("[COMPLETE_TUTORIAL] Response Code: " + webRequest.responseCode);
+        Debug.Log("[COMPLETE_TUTORIAL] Response Text: " + webRequest.downloadHandler.text);
 
         if (webRequest.result == UnityWebRequest.Result.Success)
         {
-            // success 
-            Debug.Log("�������� ����� CompleteTutorial");
+            Debug.Log("Tutorial completed successfully");
+            callback?.Invoke("success");
         }
         else
         {
-            // error
-            Debug.Log("�� �������� ����� CompleteTutorial");
+            Debug.LogError("[COMPLETE_TUTORIAL] Tutorial completion failed: " + webRequest.error);
+            Debug.LogError("[COMPLETE_TUTORIAL] Response: " + webRequest.downloadHandler.text);
+            callback?.Invoke(webRequest.error);
         }
     }
 
@@ -203,24 +255,25 @@ public class MethodsAPIScript : MonoBehaviour
 
         string json = JsonUtility.ToJson(request);
 
-        UnityWebRequest webRequest = new UnityWebRequest(BaseURL + methodURL, "POST");
-        webRequest.uploadHandler = new UploadHandlerRaw(System.Text.Encoding.UTF8.GetBytes(json));
+        // Use UnityWebRequest.Post to avoid Curl error 26
+        UnityWebRequest webRequest = UnityWebRequest.Post(BaseURL + methodURL, json, "application/json");
         webRequest.downloadHandler = new DownloadHandlerBuffer();
-        webRequest.SetRequestHeader("Content-Type", "application/json");
 
+        Debug.Log("Sending " + methodURL + " request...");
         yield return webRequest.SendWebRequest();
+        Debug.Log(methodURL + " completed. Result: " + webRequest.result);
 
         if (webRequest.result == UnityWebRequest.Result.Success)
         {
             Debug.Log($"SaveRecord success: {webRequest.downloadHandler.text}");
             onSuccess?.Invoke();
-            Debug.Log("�������� ����� SaveRecord");
+            Debug.Log("Successfully saved record");
         }
         else
         {
             Debug.LogError($"SaveRecord failed: {webRequest.error}");
             onError?.Invoke(webRequest.error);
-            Debug.Log("�������� ����� SaveRecord");
+            Debug.Log("Failed to save record");
         }
     }
 
@@ -237,12 +290,13 @@ public class MethodsAPIScript : MonoBehaviour
 
         string json = JsonUtility.ToJson(request);
 
-        UnityWebRequest webRequest = new UnityWebRequest(BaseURL + methodURL, "POST");
-        webRequest.uploadHandler = new UploadHandlerRaw(System.Text.Encoding.UTF8.GetBytes(json));
+        // Use UnityWebRequest.Post to avoid Curl error 26
+        UnityWebRequest webRequest = UnityWebRequest.Post(BaseURL + methodURL, json, "application/json");
         webRequest.downloadHandler = new DownloadHandlerBuffer();
-        webRequest.SetRequestHeader("Content-Type", "application/json");
 
+        Debug.Log("Sending " + methodURL + " request...");
         yield return webRequest.SendWebRequest();
+        Debug.Log(methodURL + " completed. Result: " + webRequest.result);
 
         if (webRequest.result == UnityWebRequest.Result.Success)
         {
@@ -269,22 +323,23 @@ public class MethodsAPIScript : MonoBehaviour
 
         string json = JsonUtility.ToJson(request);
 
-        UnityWebRequest webRequest = new UnityWebRequest(BaseURL + methodURL, "POST");
-        webRequest.uploadHandler = new UploadHandlerRaw(System.Text.Encoding.UTF8.GetBytes(json));
+        // Use UnityWebRequest.Post to avoid Curl error 26
+        UnityWebRequest webRequest = UnityWebRequest.Post(BaseURL + methodURL, json, "application/json");
         webRequest.downloadHandler = new DownloadHandlerBuffer();
-        webRequest.SetRequestHeader("Content-Type", "application/json");
 
+        Debug.Log("Sending " + methodURL + " request...");
         yield return webRequest.SendWebRequest();
+        Debug.Log(methodURL + " completed. Result: " + webRequest.result);
 
         if (webRequest.result == UnityWebRequest.Result.Success)
         {
             // success 
-            Debug.Log("�������� ����� GetGlobalRecords");
+            Debug.Log("Successfully got global records");
         }
         else
         {
             // error
-            Debug.Log("�� �������� ����� GetGlobalRecords");
+            Debug.Log("Failed to get global records");
         }
     }
 
@@ -302,23 +357,24 @@ public class MethodsAPIScript : MonoBehaviour
 
         string json = JsonUtility.ToJson(request);
 
-        UnityWebRequest webRequest = new UnityWebRequest(BaseURL + methodURL, "POST");
-        webRequest.uploadHandler = new UploadHandlerRaw(System.Text.Encoding.UTF8.GetBytes(json));
+        // Use UnityWebRequest.Post to avoid Curl error 26
+        UnityWebRequest webRequest = UnityWebRequest.Post(BaseURL + methodURL, json, "application/json");
         webRequest.downloadHandler = new DownloadHandlerBuffer();
-        webRequest.SetRequestHeader("Content-Type", "application/json");
 
+        Debug.Log("Sending " + methodURL + " request...");
         yield return webRequest.SendWebRequest();
+        Debug.Log(methodURL + " completed. Result: " + webRequest.result);
 
         if (webRequest.result == UnityWebRequest.Result.Success)
         {
             // success 
             UpdateTrickStatus(trickId);
-            Debug.Log("�������� ����� PurchaseTrick");
+            Debug.Log("Successfully purchased trick");
         }
         else
         {
             // error
-            Debug.Log("�� �������� ����� PurchaseTrick");
+            Debug.Log("Failed to purchase trick");
         }
     }
 
@@ -333,30 +389,32 @@ public class MethodsAPIScript : MonoBehaviour
             trick = new UpdateTrickRequest.Trick
             {
                 trick_id = trickId,
-                is_in_use = true // ���� ��, ��� ��� �����, ���� �� �������� ��������
+                is_in_use = true // Set to true when purchased, false when not purchased
             }
         };
 
         string json = JsonUtility.ToJson(request);
 
-        UnityWebRequest webRequest = new UnityWebRequest(BaseURL + methodURL, "PUT");
-        webRequest.uploadHandler = new UploadHandlerRaw(System.Text.Encoding.UTF8.GetBytes(json));
-        webRequest.downloadHandler = new DownloadHandlerBuffer();
+        // Use UnityWebRequest.Put to avoid Curl error 26
+        UnityWebRequest webRequest = UnityWebRequest.Put(BaseURL + methodURL, json);
         webRequest.SetRequestHeader("Content-Type", "application/json");
+        webRequest.downloadHandler = new DownloadHandlerBuffer();
 
+        Debug.Log("Sending " + methodURL + " request...");
         yield return webRequest.SendWebRequest();
+        Debug.Log(methodURL + " completed. Result: " + webRequest.result);
 
         if (webRequest.result == UnityWebRequest.Result.Success)
         {
             // success 
             Text childText = this.gameObject.GetComponentInChildren<Text>();
             childText.text = "Picked";
-            Debug.Log("�������� ����� UpdateTrickStatus");
+            Debug.Log("Successfully updated trick status");
         }
         else
         {
             // error
-            Debug.Log("�� �������� ����� UpdateTrickStatus");
+            Debug.Log("Failed to update trick status");
         }
     }
 
@@ -372,23 +430,24 @@ public class MethodsAPIScript : MonoBehaviour
 
         string json = JsonUtility.ToJson(request);
 
-        UnityWebRequest webRequest = new UnityWebRequest(BaseURL + methodURL, "POST");
-        webRequest.uploadHandler = new UploadHandlerRaw(System.Text.Encoding.UTF8.GetBytes(json));
+        // Use UnityWebRequest.Post to avoid Curl error 26
+        UnityWebRequest webRequest = UnityWebRequest.Post(BaseURL + methodURL, json, "application/json");
         webRequest.downloadHandler = new DownloadHandlerBuffer();
-        webRequest.SetRequestHeader("Content-Type", "application/json");
 
+        Debug.Log("Sending " + methodURL + " request...");
         yield return webRequest.SendWebRequest();
+        Debug.Log(methodURL + " completed. Result: " + webRequest.result);
 
         if (webRequest.result == UnityWebRequest.Result.Success)
         {
             string jsonText = webRequest.downloadHandler.text;
             GetTricksResponse[] tricks = JsonUtility.FromJson<GetTricksResponse[]>(jsonText);
             callback?.Invoke(tricks);
-            Debug.Log("�������� ����� GetTricks");
+            Debug.Log("Successfully got tricks");
         }
         else
         {
-            Debug.Log("�� �������� ����� GetTricks");
+            Debug.Log("Failed to get tricks");
             // error
         }
     }
@@ -398,21 +457,23 @@ public class MethodsAPIScript : MonoBehaviour
     {
         string methodURL = "/tricks/tricks/all";
 
-        UnityWebRequest webRequest = new UnityWebRequest(BaseURL + methodURL, "POST");
+        // Use UnityWebRequest.Post to avoid Curl error 26
+        UnityWebRequest webRequest = UnityWebRequest.Post(BaseURL + methodURL, "", "application/json");
         webRequest.downloadHandler = new DownloadHandlerBuffer();
-        webRequest.SetRequestHeader("Content-Type", "application/json");
 
+        Debug.Log("Sending " + methodURL + " request...");
         yield return webRequest.SendWebRequest();
+        Debug.Log(methodURL + " completed. Result: " + webRequest.result);
 
         if (webRequest.result == UnityWebRequest.Result.Success)
         {
             // success 
-            Debug.Log("�������� ����� GetAllTricks");
+            Debug.Log("Successfully got all tricks");
         }
         else
         {
             // error
-            Debug.Log("�� �������� ����� GetAllTricks");
+            Debug.Log("Failed to get all tricks");
         }
     }
 
@@ -430,22 +491,23 @@ public class MethodsAPIScript : MonoBehaviour
 
         string json = JsonUtility.ToJson(request);
 
-        UnityWebRequest webRequest = new UnityWebRequest(BaseURL + methodURL, "POST");
-        webRequest.uploadHandler = new UploadHandlerRaw(System.Text.Encoding.UTF8.GetBytes(json));
+        // Use UnityWebRequest.Post to avoid Curl error 26
+        UnityWebRequest webRequest = UnityWebRequest.Post(BaseURL + methodURL, json, "application/json");
         webRequest.downloadHandler = new DownloadHandlerBuffer();
-        webRequest.SetRequestHeader("Content-Type", "application/json");
 
+        Debug.Log("Sending " + methodURL + " request...");
         yield return webRequest.SendWebRequest();
+        Debug.Log(methodURL + " completed. Result: " + webRequest.result);
 
         if (webRequest.result == UnityWebRequest.Result.Success)
         {
             // success 
-            Debug.Log("�������� ����� CheckDailyLogin");
+            Debug.Log("Successfully checked daily login");
         }
         else
         {
             // error
-            Debug.Log("�� �������� ����� CheckDailyLogin");
+            Debug.Log("Failed to check daily login");
         }
     }
 
@@ -461,22 +523,23 @@ public class MethodsAPIScript : MonoBehaviour
 
         string json = JsonUtility.ToJson(request);
 
-        UnityWebRequest webRequest = new UnityWebRequest(BaseURL + methodURL, "POST");
-        webRequest.uploadHandler = new UploadHandlerRaw(System.Text.Encoding.UTF8.GetBytes(json));
+        // Use UnityWebRequest.Post to avoid Curl error 26
+        UnityWebRequest webRequest = UnityWebRequest.Post(BaseURL + methodURL, json, "application/json");
         webRequest.downloadHandler = new DownloadHandlerBuffer();
-        webRequest.SetRequestHeader("Content-Type", "application/json");
 
+        Debug.Log("Sending " + methodURL + " request...");
         yield return webRequest.SendWebRequest();
+        Debug.Log(methodURL + " completed. Result: " + webRequest.result);
 
         if (webRequest.result == UnityWebRequest.Result.Success)
         {
             // success 
-            Debug.Log("�������� ����� ResetDailyLogin");
+            Debug.Log("Successfully reset daily login");
         }
         else
         {
             // error
-            Debug.Log("�� �������� ����� ResetDailyLogin");
+            Debug.Log("Failed to reset daily login");
         }
     } 
 }

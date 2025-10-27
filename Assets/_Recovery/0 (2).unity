@@ -2805,6 +2805,7 @@ GameObject:
   - component: {fileID: 199894157}
   - component: {fileID: 199894156}
   - component: {fileID: 199894155}
+  - component: {fileID: 199894154}
   m_Layer: 0
   m_Name: back
   m_TagString: Untagged
@@ -2831,6 +2832,18 @@ RectTransform:
   m_AnchoredPosition: {x: 399, y: 160}
   m_SizeDelta: {x: 144, y: 141.8}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &199894154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199894152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b9a7978f6be74201aa740d59007a2e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &199894155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2875,7 +2888,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 199894154}
         m_TargetAssemblyTypeName: BackRecMenu, Assembly-CSharp
         m_MethodName: Back
         m_Mode: 1
@@ -7889,7 +7902,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.9000244, y: -2.4000244}
+  m_AnchoredPosition: {x: -0.9000244, y: -2.399994}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &526262109
@@ -10138,7 +10151,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.87000006}
-  m_AnchoredPosition: {x: -0.9000244, y: 4.0999756}
+  m_AnchoredPosition: {x: -0.9000244, y: 4.100006}
   m_SizeDelta: {x: 0, y: 13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &631150204
@@ -13021,7 +13034,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 49.17993, y: -40.53003}
+  m_AnchoredPosition: {x: 49.179993, y: -40.53}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &884185994
@@ -14217,7 +14230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a340c9ffddb061141981ce1bcbafa26f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinsText: {fileID: 1049108645}
+  coinsText: {fileID: 0}
 --- !u!4 &974647480
 Transform:
   m_ObjectHideFlags: 0
@@ -18076,7 +18089,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.087890625, y: -0.05065918}
+  m_AnchoredPosition: {x: 0.088012695, y: -0.05065918}
   m_SizeDelta: {x: -0.26599, y: 0.0010986}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1315685148
