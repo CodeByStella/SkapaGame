@@ -1,4 +1,12 @@
-https://github.com/user-attachments/assets/0483932b-a231-4613-add4-1fa3c8b8ec30
+<video src="https://github.com/user-attachments/assets/0483932b-a231-4613-add4-1fa3c8b8ec30" 
+       controls 
+       autoplay 
+       loop 
+       muted 
+       playsinline 
+>
+</video>
+
 
 # Unity TMA - Skate
 
